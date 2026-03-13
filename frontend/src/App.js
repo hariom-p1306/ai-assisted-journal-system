@@ -11,17 +11,17 @@ function App() {
   const userId = "123";
 
   const fetchEntries = async () => {
-    const res = await axios.get(`http://localhost:5000/api/journal/${userId}`);
+    const res = await axios.get(`https://ai-assisted-journal-system-0v8y.onrender.com/api/journal/${userId}`);
     setEntries(res.data);
   };
 
   const fetchInsights = async () => {
-    const res = await axios.get(`http://localhost:5000/api/journal/insights/${userId}`);
+    const res = await axios.get(`https://ai-assisted-journal-system-0v8y.onrender.com/api/journal/insights/${userId}`);
     setInsights(res.data);
   };
 
   const analyzeJournal = async () => {
-    await axios.post("http://localhost:5000/api/journal/analyze", {
+    await axios.post("https://ai-assisted-journal-system-0v8y.onrender.com/api/journal/analyze", {
       userId,
       text
     });
