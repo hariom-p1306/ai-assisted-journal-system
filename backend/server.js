@@ -8,10 +8,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect("mongodb://localhost:27017/journalDB")
+mongoose.connect(process.env.MONGO_URI)
 .then(()=>console.log("MongoDB connected"))
 .catch(err=>console.log(err))
-
 
 const journalRoutes = require("./routes/journalRoutes")
 
