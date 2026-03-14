@@ -1,44 +1,49 @@
-# AI-Assisted Journal System
-
-## Overview
-The AI-Assisted Journal System allows users to write journal entries and analyze their emotional state using a Large Language Model (LLM). The system stores entries, extracts emotions, keywords, and summaries, and generates insights over time.
-
-## Features
-- Write and store journal entries
-- AI emotion analysis using LLM
-- Keyword extraction and summary generation
-- Insights dashboard showing:
-  - Total entries
-  - Top emotion
-  - Most used ambience
-  - Recent keywords
-
-## Tech Stack
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB
-- Groq LLM API
-
-### Frontend
-- React.js
-- Axios
-
-## API Endpoints
-
-### Create Journal Entry
-POST `/api/journal`
-
-### Get Journal Entries
-GET `/api/journal/:userId`
-
-### Analyze Journal Entry
-POST `/api/journal/analyze`
-
-### Get Insights
-GET `/api/journal/insights/:userId`
-
 ## How to Run
 
-### Backend
+### 1. Clone Repository
+
+git clone https://github.com/yourusername/ai-assisted-journal-system.git
+
+cd ai-assisted-journal-system
+
+
+### 2. Backend Setup
+
+cd backend
+
+npm install
+
+Create a .env file and add:
+
+MONGO_URI=your_mongodb_connection_string  
+GROQ_API_KEY=your_groq_api_key
+
+Run backend server:
+
+npm start
+
+Server will run on:
+
+http://localhost:5000
+
+
+### 3. Frontend Setup
+
+cd frontend
+
+npm install
+
+npm start
+
+Frontend will run on:
+
+http://localhost:3000
+
+
+## Live Demo
+
+Frontend (Vercel):
+https://ai-assisted-journal-system-qkb8.vercel.app
+
+Backend (Render):
+https://ai-assisted-journal-system-0v8y.onrender.com
